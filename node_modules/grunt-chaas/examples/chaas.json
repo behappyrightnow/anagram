@@ -1,0 +1,5 @@
+{
+  "fixtures": ["/fixtures/"],
+  "logic": ["/logic/"],
+  "wiki": "/stories/"
+}

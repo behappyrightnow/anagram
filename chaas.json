@@ -1,0 +1,5 @@
+{
+  "fixtures": ["anagram/fixtures/"],
+  "logic": ["app/scripts/logic/"],
+  "wiki": "anagram/stories/"
+}
