@@ -1,7 +1,19 @@
 class Anagram {
-    wordList: Array<string>;
+    wordDict: {};
     constructor(wordList:Array<string>) {
-        this.wordList = wordList;
+        this.makeDictFrom(wordList);
+    }
+    makeDictFrom(wordList:Array<string>) {
+        this.wordDict = {};
+        for (var i=0;i<wordList.length;i++) {
+            var word = wordList[i];
+            var key = this.keyFrom(word);
+            if (key in this.wordDict) {
+                this.wordDict[key].push(word);
+            } else {
+                this.wordDict[key] = [word];
+            }
+        }
     }
     unscramble(word:string): Array<string> {
         var answer: Array<string> = new Array<string>();
