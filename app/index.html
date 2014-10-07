@@ -4,11 +4,9 @@
         <script type="text/javascript" src="resources/dictEn.js"></script>
         <script type="text/javascript" src="scripts/anagram.js"></script>
         <script type="text/javascript">
+            var anagram = new Anagram(EN_WORDS);
             function unscramble() {
                 var word = document.getElementById("word").value;
-                console.log(word);
-                debugger;
-                var anagram = new Anagram(EN_WORDS);
                 var answer = anagram.unscramble(word);
                 document.getElementById("unscrambled").innerHTML = answer;
             }
