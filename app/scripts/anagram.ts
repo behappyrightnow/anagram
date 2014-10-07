@@ -4,10 +4,10 @@ class Anagram {
         this.wordList = wordList;
     }
     unscramble(word:string): string {
-        var answer: string = null;
+        var answer: Array<string> = new Array<string>();
         for (var i=0;i<this.wordList.length;i++) {
             if (this.keyFrom(word) === this.keyFrom(this.wordList[i])) {
-                answer = this.wordList[i];
+                answer.push(this.wordList[i]);
             }
         }
         return answer;

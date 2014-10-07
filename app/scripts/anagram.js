@@ -3,10 +3,10 @@ var Anagram = (function () {
         this.wordList = wordList;
     }
     Anagram.prototype.unscramble = function (word) {
-        var answer = null;
+        var answer = new Array();
         for (var i = 0; i < this.wordList.length; i++) {
             if (this.keyFrom(word) === this.keyFrom(this.wordList[i])) {
-                answer = this.wordList[i];
+                answer.push(this.wordList[i]);
             }
         }
         return answer;
