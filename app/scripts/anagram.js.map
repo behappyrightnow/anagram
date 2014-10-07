@@ -1,0 +1,1 @@
+{"version":3,"file":"anagram.js","sourceRoot":"","sources":["anagram.ts"],"names":["Anagram","Anagram.constructor","Anagram.unscramble"],"mappings":"AAAA;IAAAA;;AAICA,IAHGA,+BAAAA,UAAWA,IAAWA;QAClBE,OAAOA,OAAOA,CAACA;IACnBA,CAACA;IACLF;AAACA,CAAAA,IAAA"}
