@@ -12,17 +12,19 @@ describe('Anagram tests', function() {
             var anagram = new Anagram(["door", "odor"]);
             expect(anagram.unscramble("rood")).toEqual(["door","odor"]);
         });
-    });
+    });*/
 
     it("makes key from word", function() {
         var anagram = new Anagram(["apple"]);
         expect(anagram.keyFrom("apple")).toEqual("aelpp");
     });
 
-    it("should save wordlist in constructor", function() {
-        var anagram = new Anagram(["apple"]);
-        expect(anagram.wordList).toEqual(["apple"]);
-    });*/
+    it("should save make dictionary in constructor", function() {
+        var anagram = new Anagram(["apple", "simple"]);
+        expect(anagram.wordDict).toNotBe(null);
+        expect(anagram.wordDict["aelpp"]).toEqual(["apple"]);
+        expect(anagram.wordDict["eilmps"]).toEqual(["simple"]);
+    });
 
     describe("should make dictionary with keys", function() {
         it("for one to one mappings", function() {
