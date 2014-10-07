@@ -15,7 +15,8 @@ var Anagram = (function () {
         }
     };
     Anagram.prototype.unscramble = function (word) {
-        return this.wordDict[this.keyFrom(word)];
+        var answer = word === undefined ? [] : this.wordDict[this.keyFrom(word)];
+        return answer === undefined ? [] : answer;
     };
 
     Anagram.prototype.keyFrom = function (word) {

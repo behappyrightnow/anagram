@@ -16,7 +16,8 @@ class Anagram {
         }
     }
     unscramble(word:string): Array<string> {
-        return this.wordDict[this.keyFrom(word)];
+        var answer = word === undefined ? []: this.wordDict[this.keyFrom(word)];
+        return answer === undefined ? []:answer;
     }
 
     keyFrom(word: string): string {

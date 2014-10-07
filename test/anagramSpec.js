@@ -11,6 +11,15 @@ describe('Anagram tests', function () {
             var anagram = new Anagram(["door", "odor"]);
             expect(anagram.unscramble("rood")).toEqual(["door", "odor"]);
         });
+        it("handles missing output", function () {
+            var anagram = new Anagram(["door", "odor"]);
+            expect(anagram.unscramble("blah")).toEqual([]);
+            expect(anagram.unscramble("")).toEqual([]);
+        });
+        it("handles undefined input", function () {
+            var anagram = new Anagram(["door", "odor"]);
+            expect(anagram.unscramble(undefined)).toEqual([]);
+        });
     });
 
     it("makes key from word", function () {

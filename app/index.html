@@ -1,26 +1,20 @@
-<html>
+<html ng-app ng-controller="AnagramCtrl">
     <head>
         <title>Anagram Unscrambler</title>
         <script type="text/javascript" src="resources/dictEn.js"></script>
         <script type="text/javascript" src="scripts/anagram.js"></script>
+        <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
         <script type="text/javascript">
-            function unscramble() {
-                var word = document.getElementById("word").value;
-                console.log(word);
-                debugger;
-                var anagram = new Anagram(EN_WORDS);
-                var answer = anagram.unscramble(word);
-                document.getElementById("unscrambled").innerHTML = answer;
+            function AnagramCtrl($scope) {
+                $scope.anagram = new Anagram(EN_WORDS);
             }
-
         </script>
     </head>
     <body>
         <h1>Anagram Unscrambler</h1>
         Enter word to unscramble
-        <input id="word" type="text"/>
-        <button onclick="unscramble()">Unscramble</button>
+        <input type="text" ng-model="word"/>
         <p/>
-        Unscrambled words: <span id="unscrambled"></span>
+        Unscrambled words: {{anagram.unscramble(word)}}
     </body>
 </html>
