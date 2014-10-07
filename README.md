@@ -1,8 +1,3 @@
-# Step 12
+# Step 13
 
-Improving the look and feel. Now we will wire this up with Bootstrap.
-There is a new dependency in bower.json. Please issue:
-
-bower update
-
-This will automatically bring in bootstrap and jquery.
+Convert controller to Typescript. This step will turn the controller into a more readable class.

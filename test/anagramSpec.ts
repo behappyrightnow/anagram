@@ -1,5 +1,5 @@
 /// <reference path="../lib/jasmine.d.ts"/>
-/// <reference path="../app/scripts/anagram.ts"/>
+/// <reference path="../app/scripts/logic/anagram.ts"/>
 describe('Anagram tests', function() {
 
     describe("should unscramble", function() {

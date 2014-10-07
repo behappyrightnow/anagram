@@ -2,17 +2,10 @@
     <head>
         <title>Anagram Unscrambler</title>
         <script type="text/javascript" src="resources/dictEn.js"></script>
-        <script type="text/javascript" src="scripts/anagram.js"></script>
+        <script type="text/javascript" src="scripts/logic/anagram.js"></script>
         <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
         <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
-        <script type="text/javascript">
-            function AnagramCtrl($scope) {
-                var anagram = new Anagram(EN_WORDS);
-                $scope.unscramble = function() {
-                    $scope.unscrambledWords = anagram.unscramble($scope.word);
-                }
-            }
-        </script>
+        <script type="text/javascript" src="scripts/plumbing/anagramController.js"></script>
     </head>
     <body>
         <p/>
