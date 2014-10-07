@@ -1,3 +1,5 @@
-# Step 10
+# Step 11
 
-We will now wire the application with AngularJS, and get rid of the need to click a button.
+Improving the look and feel. Taking advantage of Angular, we shall present the answer as a list.
+
+We shall stop putting the anagram object on the scope, and now move to using ng-change.

@@ -6,15 +6,23 @@
         <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
         <script type="text/javascript">
             function AnagramCtrl($scope) {
-                $scope.anagram = new Anagram(EN_WORDS);
+                var anagram = new Anagram(EN_WORDS);
+                $scope.unscramble = function() {
+                    $scope.unscrambledWords = anagram.unscramble($scope.word);
+                }
             }
         </script>
     </head>
     <body>
         <h1>Anagram Unscrambler</h1>
         Enter word to unscramble
-        <input type="text" ng-model="word"/>
+        <input type="text" ng-model="word" ng-change="unscramble()"/>
         <p/>
-        Unscrambled words: {{anagram.unscramble(word)}}
+        Unscrambled words:
+        <ul>
+            <li ng-repeat="unscrambledWord in unscrambledWords">
+                {{unscrambledWord}}
+            </li>
+        </ul>
     </body>
 </html>
