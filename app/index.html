@@ -1,4 +1,4 @@
-<html ng-app ng-controller="AnagramCtrl">
+<html ng-app ng-controller="AnagramCtrl as anagram">
     <head>
         <title>Anagram Unscrambler</title>
         <script type="text/javascript" src="resources/dictEn.js"></script>
@@ -14,11 +14,11 @@
                 <h1>Anagram Unscrambler</h1>
                 <p/>
                 Enter word to unscramble:
-                <input class="form-control" type="text" ng-model="word" ng-change="unscramble()"/>
+                <input class="form-control" type="text" ng-model="anagram.word" ng-change="anagram.unscramble()"/>
                 <p/>
                 Unscrambled words:
                 <ul>
-                    <li ng-repeat="unscrambledWord in unscrambledWords">
+                    <li ng-repeat="unscrambledWord in anagram.unscrambledWords">
                         {{unscrambledWord}}
                     </li>
                 </ul>

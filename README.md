@@ -1,3 +1,4 @@
-# Step 13
+# Step 14
 
-Convert controller to Typescript. This step will turn the controller into a more readable class.
+Stop putting data in scope (get rid of the mysterious scope object) and instead namespace controller object.
+This makes the Html and the Controller code more readable.
