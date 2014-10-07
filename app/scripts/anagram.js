@@ -15,13 +15,7 @@ var Anagram = (function () {
         }
     };
     Anagram.prototype.unscramble = function (word) {
-        var answer = new Array();
-        for (var i = 0; i < this.wordList.length; i++) {
-            if (this.keyFrom(word) === this.keyFrom(this.wordList[i])) {
-                answer.push(this.wordList[i]);
-            }
-        }
-        return answer;
+        return this.wordDict[this.keyFrom(word)];
     };
 
     Anagram.prototype.keyFrom = function (word) {
