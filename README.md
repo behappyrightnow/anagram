@@ -1,4 +1,5 @@
-== Step 9 ==
+# Step 9
+
 In this step, we will add an Angular dependency in bower.json.
 To make it work, please install bower, and then issue:
 > bower update
