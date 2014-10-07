@@ -1,7 +1,7 @@
 # Step 9
 
 In this step, we will add an Angular dependency in bower.json.
-To make it work, please install bower, and then issue:
+To make it work, please [install bower](http://bower.io/#install-bower), and then issue:
 > bower update
 
 You must issue this from the same folder that has bower.json.
