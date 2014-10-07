@@ -4,6 +4,7 @@
         <script type="text/javascript" src="resources/dictEn.js"></script>
         <script type="text/javascript" src="scripts/anagram.js"></script>
         <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
         <script type="text/javascript">
             function AnagramCtrl($scope) {
                 var anagram = new Anagram(EN_WORDS);
@@ -14,15 +15,21 @@
         </script>
     </head>
     <body>
-        <h1>Anagram Unscrambler</h1>
-        Enter word to unscramble
-        <input type="text" ng-model="word" ng-change="unscramble()"/>
         <p/>
-        Unscrambled words:
-        <ul>
-            <li ng-repeat="unscrambledWord in unscrambledWords">
-                {{unscrambledWord}}
-            </li>
-        </ul>
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Anagram Unscrambler</h1>
+                <p/>
+                Enter word to unscramble:
+                <input class="form-control" type="text" ng-model="word" ng-change="unscramble()"/>
+                <p/>
+                Unscrambled words:
+                <ul>
+                    <li ng-repeat="unscrambledWord in unscrambledWords">
+                        {{unscrambledWord}}
+                    </li>
+                </ul>
+            </div>
+        </div>
     </body>
 </html>

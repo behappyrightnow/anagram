@@ -1,5 +1,8 @@
-# Step 11
+# Step 12
 
-Improving the look and feel. Taking advantage of Angular, we shall present the answer as a list.
+Improving the look and feel. Now we will wire this up with Bootstrap.
+There is a new dependency in bower.json. Please issue:
 
-We shall stop putting the anagram object on the scope, and now move to using ng-change.
+bower update
+
+This will automatically bring in bootstrap and jquery.
