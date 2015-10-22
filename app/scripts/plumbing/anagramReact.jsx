@@ -11,19 +11,23 @@ var Anagram = React.createClass({
                 <h1>Anagram Demo</h1>
                 <p/>
                 Enter word to unscramble:
-                <form><input class="form-control" type="text" name="inputWord" onKeyPress={this.setWord} /></form>
+                <form>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="inputWord"
+                    onChange={this.setWord}/>
+                </form>
                 <UnscrambledWords wordToUnscramble={this.state.word}/>
             </div>
         );
     },
     setWord: function(event) {
-        debugger;
-        this.setState({word: event.currentTarget.inputWord.value});
+        this.setState({word: event.target.value});
     }
 });
 var UnscrambledWords = React.createClass({
     render: function() {
-        debugger;
         var results = this.getResults();
         return (
             <ul>
@@ -32,8 +36,7 @@ var UnscrambledWords = React.createClass({
         );
     },
     getResults: function() {
-        debugger;
-        var word = this.props.word;
+        var word = this.props.wordToUnscramble;
         if (word === undefined) { return new Array();}
         var anagram = new Anagram(EN_WORDS);
         var unscrambledWords = anagram.unscramble(word);
